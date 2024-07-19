@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# EXtract reading with get_temp_api
+#Apend readings to temp.log
+get_temp_api >> temp.log
+
+# Buffer last hour of readings
+tail - 60 temp.log > temp.log
